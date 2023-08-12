@@ -402,7 +402,7 @@ static void zip_clean(char *path, int fix) {
     if (setjmp(zip->env))               // prepare for throw()
         return;
     if (zip->in == NULL)
-        throw(zip, "failed to open (for writing)");
+        throw(zip, "failed to open%s", fix ? " (for writing)" : "");
 
     // Find the central directory and then fix the name of each entry as
     // needed and requested.
