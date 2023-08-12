@@ -69,7 +69,7 @@ static noreturn void throw(zip_t *zip, char *fmt, ...) {
     va_start(ap, fmt);
     vfprintf(stderr, fmt, ap);
     va_end(ap);
-    fprintf(stderr, " %s -- aborting%s\n",
+    fprintf(stderr, " %s -- skipping%s\n",
             zip->path, zip->mod ? " (modified)" : "");
     free(zip->extra);
     free(zip->repl);
