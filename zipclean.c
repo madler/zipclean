@@ -307,7 +307,11 @@ static off_t zip64_local(zip_t *zip, size_t xlen, size_t skip) {
             return zip->extra[i] +
                    ((off_t)zip->extra[i + 1] << 8) +
                    ((off_t)zip->extra[i + 2] << 16) +
-                   ((off_t)zip->extra[i + 3] << 24);
+                   ((off_t)zip->extra[i + 3] << 24) +
+                   ((off_t)zip->extra[i + 4] << 32) +
+                   ((off_t)zip->extra[i + 5] << 40) +
+                   ((off_t)zip->extra[i + 6] << 48) +
+                   ((off_t)zip->extra[i + 7] << 56);
         }
         i += 4 + len;
     }
