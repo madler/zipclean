@@ -425,7 +425,7 @@ int main(int argc, char **argv) {
         if (argv[i][0] == '-') {
             if (strcmp(argv[i] + 1, "f") == 0)
                 fix = 1;
-            else if (strcmp(argv[i], "-") == 0) {
+            else if (strcmp(argv[i] + 1, "-") == 0) {
                 opt = i;
                 break;
             }
