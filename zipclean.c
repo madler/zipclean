@@ -1,6 +1,6 @@
 /* zipclean.c -- clean .zip file directory traversal vulnerabilities
  * Copyright (C) 2023 Mark Adler
- * Version 1.0  12 Aug 2023  Mark Adler
+ * Version 1.1  12 Aug 2023  Mark Adler
  */
 
 /*
@@ -22,6 +22,11 @@
 
   Mark Adler
   madler@alumni.caltech.edu
+ */
+
+/* Version history:
+   1.0  12 Aug 2023  First version
+   1.1  12 Aug 2023  Bug fixes and error message clarifications
  */
 
 // Modify the entry names in a zip file in place to remove directory traversal
